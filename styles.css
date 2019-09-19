@@ -1,0 +1,39 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/hbd1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff !important;
+}
+.logo{
+    height: 150px;
+    margin-top: 30px;
+    width: 20%;
+}
+.hbd{
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 72px;
+    letter-spacing: 4px;
+}
+.desc{
+    margin-top: 50px;
+}
+.blur {
+    margin-top: 50px;
+    /* box-shadow: 5px 5px 5px solid white; */
+}
+.button{
+    position: absolute;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+}
+h1{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

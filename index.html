@@ -7,9 +7,9 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon-32x32.png"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/javascript" href="js/main.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.js">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.js"> -->
     <title>AKAN NAME</title>
 </head>
 <body>
@@ -43,35 +43,36 @@
                 <h1 class="text-center">AKAN NAME</h1>
                 <label class="label label-col-md-3 control-label">Enter the Century</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter the Century">
+                    <input type="number" class="form-control" name="name" placeholder="Enter the Century" required min="0" max="20">
                 </div>
                 <label class="label label-col-md-3 control-label">Enter your Birthday Year</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter your Birhtday Year">
+                    <input type="number" class="form-control" name="name" placeholder="Enter your Birhtday Year" required min="0" max="2019">
                 </div> 
                 <label class="label label-col-md-3 control-label">Enter your Birthday Month</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter your Birthday Month">
+                    <input type="number" class="form-control" name="name" placeholder="Enter your Birthday Month" required min="0" max="12">
                 </div> 
                 <label class="label label-col-md-3 control-label">Enter your Birthday Date</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter your Birthday Date">
+                    <input type="number" class="form-control" name="name" placeholder="Enter your Birthday Date" required min="0" max="31">
                 </div> 
                 <label class="label label-col-md-3 control-label">Gender</label>
                 <div class="col-md-9">
                         <form class="radio-button">
-                                <input type="radio" class="genders labels" value="male" id="radgender" name="rads" required>Male
-                                <input type="radio" class="genders labels" value="female" id="radgender" name="rads" required>Female
+                                <input type="radio" class="genders labels" value="male" id="radgender" name="radbtn" required>Male
+                                <input type="radio" class="genders labels" value="female" id="radgender" name="radbtn" required>Female
                               </form>
                 </div> 
-                <a href="#results"><div  name="button" class="btn btn-info ">Submit</div></a>
+                <a href="#"><div  name="button" class="btn btn-info " onclick=checkDayOfWeek()>Explore the Birthday</div></a>
             </div>
             <div class="col-md-3"> 
-            <h1 class="results">THE OUTPUT</h1>    
+            <h1 class="#output">THE OUTPUT</h1>    
             </div>
         </div>
     </div>
 </section>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 var century,year, month, dayOfMonth, dayOfWeek,day;
 
 function getInput(){
-    century=parseInt(document.getElementById("century"));
-    year=parseInt(document.getElementById("year"));
-    month=parseInt(document.getElementById("month"));
-    dayOfmonth=parseInt(document.getElementById("date"));
-    dayOfWeek=parseInt(document.getElementById("day"));
-    day=parseInt(document.getElementById("day"));
+    century=parseInt(document.getElementById("century")).value;
+    year=parseInt(document.getElementById("year")).value;
+    month=parseInt(document.getElementById("month")).value;
+    dayOfmonth=parseInt(document.getElementById("month")).value;
+    dayOfWeek=parseInt(document.getElementById("dayOfWeek")).value;
+    day=parseInt(document.getElementById("day")).value;
 
 if (century == "") {
     alert("Input the correct Century");
@@ -35,17 +35,11 @@ var female=["Akosua", "Adwoa", "Abenaa","Akua","Yaa","Afua","Ama"];
 var dayOfWeek = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
-function calculateDay() {
+function calculateDay(){
     getInput();
-    dayOfWeek=( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )% 7;
-    console.log("dayOfWeek");
-
-    if (dayOfWeek<0){
-        dayOfWeek=dayOfWeek;
-    }
-    else if(dayOfWeek>0) {
-        return dayOfWeek;
-    }
+   var  dayOfWeek = ((((century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + dayOfMonth) % 7);
+    console.log("dayOfWeek"); 
+    return (Math.floor(dayOfWeek));
 }
 function checkDayOfWeek(){
     day = calculateDay();

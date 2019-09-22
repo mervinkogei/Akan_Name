@@ -38,7 +38,7 @@ var dayOfWeek = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","
 function calculateDay() {
     getInput();
     dayOfWeek=( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )% 7;
-    console.log(dayOfWeek);
+    console.log("dayOfWeek");
 
     if (dayOfWeek<0){
         dayOfWeek=dayOfWeek;
@@ -47,7 +47,7 @@ function calculateDay() {
         return dayOfWeek;
     }
 }
-var checkday=function checkDayOfWeek(){
+function checkDayOfWeek(){
     day = calculateDay();
      checkgender();
      console.log("The day of the week is correct");
@@ -114,7 +114,7 @@ switch (checkgender){
             break;
         case 7:
         document.getElementById("output") + "The day is on a "+ day[6] + "the name is "+ female[6];
-            break
+            break;
         default:
             console.log("The gender is male");
     }

@@ -25,7 +25,9 @@ This is a web application derived from Ghanian Culture to know a ``user's birthd
   * Markdown
   
 ## BDD
-
+>The application requires the user to fill in their details in a form: ie Enter the century, year of birth, month of birth and their date of birth and choose their their gender.
+>The application calculates the day of the week the user was born and outputs it.
+>The application matches the day of the week with a specific Akan Name and outputs it to the user with a personalized message.
 
 
 ## Known Bugs

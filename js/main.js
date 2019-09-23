@@ -1,5 +1,6 @@
 var century, year, month, dayOfMonth, dayOfWeek, day;
 
+
 var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 var day_name= [ "Sunday","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -22,19 +23,24 @@ function checkDayOfWeek() {
 }
  
 function checkgender(){
+var gen = document.getElementsByName("rads");
+    for(i=0; i<gen.length; i++){
+        if(gen[i].checked){
 
-    day = calculateDay();
-    var gen = document.getElementsByName("rads");
-    if (gen[0].checked == true) {
-        var gender = "male";
-    } 
-    else {
-        var gender = "female";
-       
+            return (gen[i].value);
+            
+        }
     }
+    // if (gen[0].checked == true) {
+    //     var gender = "male";
+    // } 
+    // else {
+    //     var gender = "female";
+       
+    // }
    
     switch (gender) {
-        case gender ="male":
+        case gen =="male":
             switch (day) {
                 case 1:
                     document.getElementById("output").innerHTML = "The day is on a " + day_name[0] +"the name is " +  male[0];
@@ -69,7 +75,7 @@ function checkgender(){
             }
     }
     switch (gender) {
-        case gender = "female":
+        case gen == "female":
             switch (day) {
                 case 1:
                     document.getElementById("output").innerHTML = "The day is on a " + day_name[0] +"the name is " +  female[0];

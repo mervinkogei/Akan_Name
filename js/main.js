@@ -108,7 +108,7 @@ function checkgender(){
                     alert("The day is on a " + day_name[6] + "the name is " + female[6]);
                     break;
                 default:
-                    console.log("The gender is female");
+                    console.log("The gender is female");//
             }
     }
 }

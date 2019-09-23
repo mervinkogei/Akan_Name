@@ -32,6 +32,7 @@ This is a web application derived from Ghanian Culture to know a ``user's birthd
 
 ## Known Bugs
 * my function to check on the date is not working efficiently
+* my swicth case on the gender doesnt't display on the page
 
 ## License
 > MIT License &copy 2019 VIncent K Kogei 

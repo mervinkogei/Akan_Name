@@ -24,23 +24,17 @@ function checkDayOfWeek() {
  
 function checkgender(){
 var gen = document.getElementsByName("rads");
-    for(i=0; i<gen.length; i++){
-        if(gen[i].checked){
-
-            return (gen[i].value);
-            
-        }
-    }
-    // if (gen[0].checked == true) {
-    //     var gender = "male";
-    // } 
-    // else {
-    //     var gender = "female";
+   
+    if (gen[0].checked == true) {
+        var gender = "male";
+    } 
+    else {
+        var gender = "female";
        
-    // }
+    }
    
     switch (gender) {
-        case gen =="male":
+        case gender ="male":
             switch (day) {
                 case 1:
                     document.getElementById("output").innerHTML = "The day is on a " + day_name[0] +"the name is " +  male[0];
@@ -75,7 +69,7 @@ var gen = document.getElementsByName("rads");
             }
     }
     switch (gender) {
-        case gen == "female":
+        case gender = "female":
             switch (day) {
                 case 1:
                     document.getElementById("output").innerHTML = "The day is on a " + day_name[0] +"the name is " +  female[0];

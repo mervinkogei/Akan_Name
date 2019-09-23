@@ -1,117 +1,114 @@
-var century,year, month, dayOfMonth, dayOfWeek,day;
+var century, year, month, dayOfMonth, dayOfWeek, day;
 
-function getInput(){
-    century=parseInt(document.getElementById("century")).value;
-    year=parseInt(document.getElementById("year")).value;
-    month=parseInt(document.getElementById("month")).value;
-    dayOfmonth=parseInt(document.getElementById("month")).value;
-    dayOfWeek=parseInt(document.getElementById("dayOfWeek")).value;
-    day=parseInt(document.getElementById("day")).value;
-
-if (century == "") {
-    alert("Input the correct Century");
-    return false;
-}
-else if (year == ""){
-    alert("Input the correct year format");
-    return false;
-}
-else if (month == ""){
-    alert("Input the correct month format");
-    return false;
-}
-else if (dayOfMonth == ""){
-    alert("Input the correct dayOfMonth");
-    return false;
-}
-else if(dayOfWeek == ""){
-    alert("Input the dayOfWeek");
-    return false;
-}
-}
+// function getInput() {
+//     century = parseInt(document.getElementById("century").value);
+//     year = parseInt(document.getElementById("year").value);
+//     month = parseInt(document.getElementById("month").value);
+//     dayOfmonth = parseInt(document.getElementById("date").value);
+//     console.log(century,year,month);
+// }
 
 var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-var female=["Akosua", "Adwoa", "Abenaa","Akua","Yaa","Afua","Ama"];
-var dayOfWeek = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+var day_name= [ "Sunday","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-
-function calculateDay(){
-    getInput();
-   var  dayOfWeek = ((((century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + dayOfMonth) % 7);
-    console.log("dayOfWeek"); 
-    return (Math.floor(dayOfWeek));
+function calculateDay() {
+    // getInput();
+    var century = parseInt(document.getElementById("century").value);
+    var year = parseInt(document.getElementById("year").value);
+    var month = parseInt(document.getElementById("month").value);
+    var dayOfMonth = parseInt(document.getElementById("date").value);
+    dayOfWeek = ((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + dayOfMonth) % 7) - 1;
+    return Math.floor(dayOfWeek);
+    
+    
 }
-function checkDayOfWeek(){
+
+function checkDayOfWeek() {
     day = calculateDay();
-     checkgender();
-     console.log("The day of the week is correct");
+    checkgender();
 }
-
+ 
 function checkgender(){
-    var gen = document.getElementsByName("radbtn");
-    if(gen[0].checked == true){
+
+    day = calculateDay();
+    var gen = document.getElementsByName("rads");
+    if (gen[0].checked == true) {
         var gender = "male";
-    }else if(gen[1].checked == true){
+    } 
+    else {
         var gender = "female";
-    }else {
-      console.log("The selected gender is correct");
+       
     }
-
-switch (checkgender){
-    case gender="male":
-        switch (day){
-        case 1:
-       document.getElementById("output").innerHTML + "The day is on a "+ day[0] + "the name is "+ male[0];
-        break;
-        case 2:
-        document.getElementById("output").innerHTML + "The day is on a "+ day[1] + "the name is "+ male[1];
-            break;
-        case 3:
-        document.getElementById("output").innerHTML + "The day is on a "+ day[2] + "the name is "+ male[2];
-            break;
-        case 4:
-        document.getElementById("output").innerHTML + "The day is on a "+ day[3] + "the name is "+ male[3];
-            break;
-        case 5:
-        document.getElementById("output").innerHTML + "The day is on a "+ day[4] + "the name is "+ male[4];
-             break;
-        case 6:
-        document.getElementById("output").innerHTML + "The day is on a "+ day[5] + "the name is "+ male[5];
-            break;
-        case 7:
-        document.getElementById("output").innerHTML + "The day is on a "+ day[6] + "the name is "+ male[6];
-            break
-        default:
-            console.log("The gender is male");
+   
+    switch (gender) {
+        case gender ="male":
+            switch (day) {
+                case 1:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[0] +"the name is " +  male[0];
+                    alert("The day is on a " + day_name[0] +" the name is " +  male[0]);
+                    break;
+                case 2:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[1] + "the name is " + male[1];
+                    alert("The day is on a " + day_name[1] + "the name is " + male[1]);
+                    break;
+                case 3:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[2] + "the name is " + male[2];
+                    alert("The day is on a " + day_name[2] + "the name is " + male[2]);
+                      break;
+                case 4:
+                    document.getElementById("output").innerHTML =  "The day is on a " + day_name[3] + "the name is " + male[3];
+                    alert("The day is on a " + day_name[3] + "the name is " + male[3]);
+                    break;
+                case 5:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[4] +  "the name is " + male[4];
+                    alert("The day is on a " + day_name[4] + "the name is " + male[4]);
+                    break;
+                case 6:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[5] + "the name is " + male[5];
+                    alert("The day is on a " + day_name[5] + "the name is " + male[5]);
+                    break;
+                case 7:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[6] + "the name is " + male[6];
+                    alert("The day is on a " + day_name[6] + "the name is " + male[6]);
+                    break;
+                default:
+                    console.log("The gender is male");
+            }
+    }
+    switch (gender) {
+        case gender = "female":
+            switch (day) {
+                case 1:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[0] + "the name is " + female[0];
+                    alert("The day is on a " + day_name[0] + "the name is " + female[0]);
+                    break;
+                case 2:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[1] + "the name is " + female[1];
+                    alert("The day is on a " + day_name[1] + "the name is " + female[1]);
+                    break;
+                case 3:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[2] + "the name is " + female[2];
+                    alert("The day is on a " + day_name[2] + "the name is " + female[2]);
+                    break;
+                case 4:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[3] + "the name is " + female[3];
+                    alert("The day is on a " + day_name[3] + "the name is " + female[3]);
+                    break;
+                case 5:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[4] + "the name is " + female[4];
+                    alert("The day is on a " + day_name[4] + "the name is " + female[4]);
+                    break;
+                case 6:
+                    document.getElementById("output").innerHTML ="The day is on a " + day_name[5] + "the name is " + female[5];
+                    alert("The day is on a " + day_name[5] + "the name is " + female[5]);
+                    break;
+                case 7:
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[6] + "the name is " + female[6];
+                    alert("The day is on a " + day_name[6] + "the name is " + female[6]);
+                    break;
+                default:
+                    console.log("The gender is female");
+            }
     }
 }
-switch (checkgender){
-    case gender="female":
-        switch (day){
-        case 1:
-       document.getElementById("output") + "The day is on a "+ day[0] + "the name is "+ female[0];
-        break;
-        case 2:
-        document.getElementById("output") + "The day is on a "+ day[1] + "the name is "+ female[1];
-            break;
-        case 3:
-        document.getElementById("output") + "The day is on a "+ day[2] + "the name is "+ female[2];
-            break;
-        case 4:
-        document.getElementById("output") + "The day is on a "+ day[3] + "the name is "+ female[3];
-            break;
-        case 5:
-        document.getElementById("output") + "The day is on a "+ day[4] + "the name is "+ female[4];
-             break;
-        case 6:
-        document.getElementById("output") + "The day is on a "+ day[5] + "the name is "+ female[5];
-            break;
-        case 7:
-        document.getElementById("output") + "The day is on a "+ day[6] + "the name is "+ female[6];
-            break;
-        default:
-            console.log("The gender is male");
-    }
-}
-
-

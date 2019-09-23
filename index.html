@@ -26,10 +26,10 @@
         <div class="col-sm-6">
                <p class="desc text-justify">Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born..</p>
             </div>
-
+<!-- 
         <div class="button bg-white">
             <a href="#name" class="btn text-black bg-white" >EXPLORE NAME</a>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -43,36 +43,41 @@
                 <h1 class="text-center">AKAN NAME</h1>
                 <label class="label label-col-md-3 control-label">Enter the Century</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter the Century" required min="0" max="20">
+                    <input type="number" class="form-control" id="century" name="name" placeholder="Enter the Century" required min="0" max="20">
                 </div>
                 <label class="label label-col-md-3 control-label">Enter your Birthday Year</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter your Birhtday Year" required min="0" max="2019">
+                    <input type="number" class="form-control" id="year" placeholder="Enter your Birhtday Year" required min="0" max="2019">
                 </div> 
                 <label class="label label-col-md-3 control-label">Enter your Birthday Month</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter your Birthday Month" required min="0" max="12">
+                    <input type="number" class="form-control" id="month" placeholder="Enter your Birthday Month" required min="0" max="12">
                 </div> 
                 <label class="label label-col-md-3 control-label">Enter your Birthday Date</label>
                 <div class="col-md-9">
-                    <input type="number" class="form-control" name="name" placeholder="Enter your Birthday Date" required min="0" max="31">
+                    <input type="number" class="form-control" id="date" placeholder="Enter your Birthday Date" required min="0" max="31">
                 </div> 
                 <label class="label label-col-md-3 control-label">Gender</label>
                 <div class="col-md-9">
-                        <form class="radio-button">
-                                <input type="radio" class="genders labels" value="male" id="radgender" name="radbtn" required>Male
-                                <input type="radio" class="genders labels" value="female" id="radgender" name="radbtn" required>Female
-                              </form>
+                 
                 </div> 
-                <a href="#"><div  name="button" class="btn btn-info " onclick="checkDayOfWeek()">Explore the Birthday</div></a>
+                <form class="radio-button">
+                    <input type="radio" class="genders labels" value="male" id="rad1" name="rads" required>Male
+                    <input type="radio" class="genders labels" value="female" id="rad1" name="rads" required>Female
+                  </form>
+                  <br>
+                  <a href="#result"><button type="button" name="button" class="btn btn-primary mb-2" onclick="checkDayOfWeek()">Calculate Birthday</button></a>
+                  <h2 class ="text-center" id="output"></h2>
             </div>
             <div class="col-md-3"> 
-            <h1 id="output">THE OUTPUT</h1>    
-            </div>
+            
         </div>
     </div>
 </section>
 </div>
 <script src="js/main.js"></script>
 </body>
+<footer class="text-center">
+    Copyright &copy; 2019 designed by Vincent.
+</footer>
 </html>

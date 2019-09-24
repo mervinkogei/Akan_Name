@@ -67,8 +67,7 @@ var gen = document.getElementsByName("rads");
                 default:
                     console.log("The gender is male");
             }
-    }
-    switch (gender) {
+    break;
         case gender = "female":
             switch (day) {
                 case 1:

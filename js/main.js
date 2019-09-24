@@ -61,7 +61,7 @@ var gen = document.getElementsByName("rads");
                     alert("The day is on a " + day_name[5] + "the name is " + male[5]);
                     break;
                 case 7:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[6] + " " + "the name is " + male[6];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[6]  + " " + "the name is " + male[6];
                     alert("The day is on a " + day_name[6] + "the name is " + male[6]);
                     break;
                 default:
@@ -71,31 +71,31 @@ var gen = document.getElementsByName("rads");
         case gender = "female":
             switch (day) {
                 case 1:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[0] +"the name is " +  female[0];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[0] + " "  +"the name is " +  female[0];
                     alert("The day is on a " + day_name[0] +" the name is " +  female[0]);
                     break;
                 case 2:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[1] + "the name is " + female[1];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[1] + " "  + "the name is " + female[1];
                     alert("The day is on a " + day_name[1] + "the name is " + female[1]);
                     break;
                 case 3:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[2] + "the name is " + female[2];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[2] + " "  + "the name is " + female[2];
                     alert("The day is on a " + day_name[2] + "the name is " + female[2]);
                       break;
                 case 4:
-                    document.getElementById("output").innerHTML =  "The day is on a " + day_name[3] + "the name is " + female[3];
+                    document.getElementById("output").innerHTML =  "The day is on a " + day_name[3] + " "  + "the name is " + female[3];
                     alert("The day is on a " + day_name[3] + "the name is " + female[3]);
                     break;
                 case 5:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[4] +  "the name is " + female[4];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[4] + " "  +  "the name is " + female[4];
                     alert("The day is on a " + day_name[4] + "the name is " + female[4]);
                     break;
                 case 6:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[5] + "the name is " + female[5];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[5] + " "  + "the name is " + female[5];
                     alert("The day is on a " + day_name[5] + "the name is " + female[5]);
                     break;
                 case 7:
-                    document.getElementById("output").innerHTML = "The day is on a " + day_name[6] + "the name is " + female[6];
+                    document.getElementById("output").innerHTML = "The day is on a " + day_name[6] + " "  + "the name is " + female[6];
                     alert("The day is on a " + day_name[6] + "the name is " + female[6]);
                     break;
                 default:
